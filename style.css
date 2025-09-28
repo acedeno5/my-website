@@ -186,6 +186,40 @@ img {
     cursor: pointer;
 }
 
+/* === New Additions === */
+
+/* About Me section images */
+.uniform-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    margin-bottom: 12px;
+}
+
+/* Projects section grid */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 24px;
+}
+
+.project-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.project-photo:hover {
+    transform: scale(1.05);
+}
+
 /* ===== Responsive Styles ===== */
 @media (max-width: 768px) {
     .hamburger {
@@ -268,5 +302,15 @@ img {
 
     .quote-txt {
         font-size: 24px;
+    }
+
+    /* Projects on mobile */
+    .project-photo {
+        height: 180px;
+    }
+
+    .uniform-photo {
+        width: 140px;
+        height: 140px;
     }
 }
